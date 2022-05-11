@@ -1,0 +1,30 @@
+{
+  "tasks": [
+    {
+      "id":"1",
+      "text":"Doctors Appointment",
+      "day":"march",
+      "reminder":true
+
+    },
+    {
+      "id":2,
+      "text":"Meeting at school",
+      "day":"march 3rd at 1.30",
+      "reminder":true
+
+    },
+    {
+      "id":3,
+      "text":"applying for developer position",
+      "day":"April,2.30",
+      "reminder":true
+
+    }
+
+
+  ]
+}
+
+
+
