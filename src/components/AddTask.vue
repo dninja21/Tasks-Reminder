@@ -33,7 +33,7 @@
 
                 text:'',
                 day:'',
-                reminder:false
+                reminder:false,
             }
         },
 
@@ -43,20 +43,23 @@
                    e.preventDefault()
                    if(!this.text)
                     {
-                      alert('Please add a task')
+                      alert('Please add a task');
                       return
                     }
 
-                    const new_task={
+                    const newTask={
                         //Math.floor returns the largest number that is less than the given number
                         id: Math.floor(Math.random()*100000),
                         text:this.text,
                         day: this.day,
-                        reminder:this.reminder,
+                        reminder:this.reminder
 
                     }
-                    console.log(new_task)
-                    this.$emit('add-task',new_task)  //add-task is a declaration nothing more 
+                    console.log(newTask)
+                    this.text="",
+                    this.day="",
+                    this.reminder="false",
+                    this.$emit('add-task',newTask)  //add-task is a declaration nothing more 
                 
 
 
