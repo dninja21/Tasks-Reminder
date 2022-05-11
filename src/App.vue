@@ -1,6 +1,6 @@
 <template>
  <div class="container">
- <Header @toggle-add-task="toggleAddTask" title="Jobs Tracker"/>
+ <Header @toggle-add-task="toggleAddTask" title="Jobs Tracker" :showAddTask="showAddTask"/>
  <div v-show="showAddTask">
     <AddTask @add-task="addTask"/> 
  </div> 
@@ -48,8 +48,7 @@ export default
       this.showAddTask=!this.showAddTask
 
     },
-
-
+    
     deleteTask(id) {
   
       this.tasks=this.tasks.filter((task)=>task.id!==id)
