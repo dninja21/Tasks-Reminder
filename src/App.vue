@@ -2,8 +2,8 @@
  <div class="container">
  <Header title="Jobs Tracker"/>
  <AddTask @add-task="addTask"/> 
- <Tasks @toggle-reminder="toggleReminder"/>
- <Tasks @delete-task="deleteTask" :tasks="tasks"/>
+ <Tasks @toggle-reminder="toggleReminder"
+  @delete-task="deleteTask" :tasks="tasks"/>
  </div>
 </template>
 
@@ -20,7 +20,7 @@ export default
   components: {
     Header,
     Tasks,
-    AddTask
+    AddTask,
   
 }, 
 
@@ -38,12 +38,13 @@ export default
 
     },
     deleteTask(id) {
-     
+      alert(id);
       this.tasks=this.tasks.filter((task)=>task.id!==id)
     },
     
     toggleReminder(id)
     {
+    
       this.tasks=this.tasks.map((task)=>task.id ===id ?{... task, reminder:!task.reminder}:task)
 
     },

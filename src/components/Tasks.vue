@@ -8,13 +8,12 @@
 import Task from './Task'
 
     export default {
-        
         name:'Tasks',
         props:{
             tasks:Array,
         },
         components:{
-            Task 
+            Task, 
         },
         eimits:['delete-task','toggle-reminder'],
 
