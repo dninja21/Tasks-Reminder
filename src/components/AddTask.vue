@@ -61,20 +61,10 @@
                     this.reminder="false",
                     this.$emit('add-task',newTask)  //add-task is a declaration nothing more 
                 
-
-
-
-
-
-
                 }
 
 
-    }
-
-
-
-
+               }
 
 
     }
