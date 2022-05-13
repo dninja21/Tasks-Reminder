@@ -1,7 +1,7 @@
 <template>
     <header>
         <h1>{{title}}</h1>
-        <Button 
+        <Button v-show="homePage"
         @btn-click="$emit('toggle-add-task')"
         :text="showAddTask ?'close':'Add Task'"
         :color="showAddTask?'red':'green'" />
@@ -23,6 +23,23 @@ import Button from "./Button"
     },
     components:{
         Button,
+    },
+    //for this add task button to be displayed if its on home page
+    computed:{
+        homePage()
+        {
+            if(this.$route.path === '/')
+            {
+
+                return true
+            }
+            else 
+            {
+                return false
+            }
+
+        }
+
     }
 
    
