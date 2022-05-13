@@ -1,6 +1,6 @@
 <template>
  <div class="container">
- <Header @toggle-add-task="toggleAddTask" title="Jobs Tracker" :showAddTask="showAddTask"/>
+ <Header @toggle-add-task="toggleAddTask" title="Tasks Reminder" :showAddTask="showAddTask"/>
  
   <router-view :showAddTask="showAddTask"></router-view>
  <Footer/>
